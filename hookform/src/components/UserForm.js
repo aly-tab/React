@@ -32,7 +32,6 @@ const UserForm = props => {
                 <label>Confirm Password: </label>
                 <input onChange={onChange} type="text" name="confirmPassword" />
             </div>
-            <input type="submit" value="Create User" />
         </form>
     );
 };
