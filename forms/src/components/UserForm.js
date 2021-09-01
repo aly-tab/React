@@ -118,11 +118,6 @@ const UserForm = props => {
                 <label>Confirm Password: </label>
                 <input onChange={onChange} onChange={handleConfirmPassword} onChange={handlePasswordMatch} type="text" name="confirmPassword" />
                 {
-                    confirmPasswordError ?
-                    <p>{ confirmPasswordError }</p>:
-                    ''
-                }
-                {
                     passwordMatchError ?
                     <p>{ passwordMatchError }</p>:
                     ''
