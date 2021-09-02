@@ -11,7 +11,6 @@ const UserForm = props => {
     const [lastNameError, setLastNameError] = useState("");
     const [emailError, setEmailError] = useState("");
     const [passwordError, setPasswordError] = useState("");
-    const [confirmPasswordError, setConfirmPasswordError] = useState("");
     const [passwordMatchError, setPasswordMatchError] = useState("");
 
     const onChange = e => {
@@ -54,15 +53,6 @@ const UserForm = props => {
             setPasswordError("Field must be at least 8 characters");
         } else {
             setPasswordError("");
-        }
-    }
-
-    const handleConfirmPassword = (f,e) => {
-        setConfirmPassword(e.target.value);
-        if(e.target.value.length < 8) {
-            setConfirmPasswordError("Field must be at least 8 characters");
-        } else {
-            setConfirmPasswordError("");
         }
     }
 
@@ -116,7 +106,7 @@ const UserForm = props => {
             </div>
             <div>
                 <label>Confirm Password: </label>
-                <input onChange={onChange} onChange={handleConfirmPassword} onChange={handlePasswordMatch} type="text" name="confirmPassword" />
+                <input onChange={onChange} onChange={handlePasswordMatch} type="text" name="confirmPassword" />
                 {
                     passwordMatchError ?
                     <p>{ passwordMatchError }</p>:
