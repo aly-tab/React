@@ -6,7 +6,8 @@ const BoxForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        arr.push(color);
+        //arr.push(color);
+        setArr([...arr, color])
         console.log(arr);
     };
 
